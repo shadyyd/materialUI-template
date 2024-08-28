@@ -2,7 +2,13 @@ import { Box, Typography, Button, TextField, Container } from "@mui/material";
 
 const HeroSection = () => {
   return (
-    <Box sx={{ position: "relative", overflow: "hidden", padding: "40px 0" }}>
+    <Box
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+        padding: "40px 0",
+      }}
+    >
       {/* Left Image */}
       <Box
         sx={{
@@ -42,7 +48,7 @@ const HeroSection = () => {
         />
       </Box>
 
-      <Container sx={{ position: "relative", zIndex: 2 }}>
+      <Container sx={{ position: "relative", zIndex: 2, padding: "5px" }}>
         <Box
           id="home"
           sx={{
@@ -51,6 +57,12 @@ const HeroSection = () => {
             alignItems: "center",
             backgroundColor: "transparent",
             padding: "40px",
+            gap: "15px",
+            flexDirection: {
+              xs: "column",
+              md: "row",
+              lg: "row",
+            },
           }}
         >
           {/* Text Section */}
@@ -73,7 +85,13 @@ const HeroSection = () => {
             </Typography>
 
             {/* Input and Buttons */}
-            <Box sx={{ display: "flex", alignItems: "center", gap: "15px" }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "15px",
+              }}
+            >
               <TextField
                 placeholder="Your website URL..."
                 variant="outlined"
@@ -106,7 +124,9 @@ const HeroSection = () => {
           </Box>
 
           {/* Image Section */}
-          <Box sx={{ width: "500px" }}>
+          <Box
+            sx={{ width: "500px", display: "flex", justifyContent: "center" }}
+          >
             <img
               src="https://templatemo.com/templates/templatemo_562_space_dynamic/assets/images/banner-right-image.png"
               alt="Hero"

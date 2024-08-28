@@ -7,10 +7,17 @@ const ContactSection = () => {
       sx={{
         backgroundImage:
           "url('https://templatemo.com/templates/templatemo_562_space_dynamic/assets/images/contact-bg.png')",
-        paddingTop: 10,
+        // paddingTop: 10,
         paddingBottom: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingLeft: {
+          lg: 20,
+          xs: 5,
+        },
+        paddingRight: {
+          lg: 20,
+          xs: 5,
+        },
+
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         color: "white",
@@ -25,6 +32,11 @@ const ContactSection = () => {
           zIndex: 1,
           flexWrap: "wrap",
           paddingTop: 5,
+          flexDirection: {
+            xs: "column",
+            md: "row",
+            lg: "row",
+          },
         }}
       >
         {/* Left Section */}
@@ -167,7 +179,7 @@ const ContactSection = () => {
             right: { xs: "auto", md: "-140px" },
             top: { xs: "auto", md: "120px" }, // Adjust this to fit your layout
             width: "200px", // Adjust the size as needed
-            display: { xs: "none", md: "block" }, // Hide on small screens
+            display: { xs: "none", lg: "block" }, // Hide on small screens
           }}
         >
           <img

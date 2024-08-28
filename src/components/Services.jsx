@@ -7,11 +7,17 @@ export const Services = () => {
   ];
 
   return (
-    <Container sx={{ marginTop: 14, marginBottom: 10 }}>
+    <Container sx={{ marginBottom: 10 }}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+            lg: "row",
+          },
+          gap: "5px",
           alignItems: "center",
           padding: "2rem",
           backgroundColor: "transparent",

@@ -28,10 +28,16 @@ export const AboutUs = () => {
         sx={{
           backgroundImage:
             "url(https://templatemo.com/templates/templatemo_562_space_dynamic/assets/images/about-bg.png)",
-          paddingTop: 10,
-          paddingBottom: 10,
-          paddingLeft: 20,
-          paddingRight: 20,
+          height: {
+            xs: "1350px",
+            md: "900px",
+            lg: "auto",
+          },
+          // paddingBottom: 10,
+          // paddingLeft: 20,
+          // paddingRight: 20,
+          display: "flex",
+          justifyContent: "center",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
@@ -39,17 +45,29 @@ export const AboutUs = () => {
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             {/* Left Image */}
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              md={12}
+              lg={6}
+              sx={{
+                height: "auto",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Box
                 component="img"
                 src="https://templatemo.com/templates/templatemo_562_space_dynamic/assets/images/about-left-image.png"
                 alt="Person working on laptop"
-                sx={{ width: "350px", height: "auto" }}
+                sx={{
+                  height: "auto",
+                }}
               />
             </Grid>
 
             {/* Right Content */}
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={12} lg={6}>
               <Grid container spacing={4}>
                 {services.map((service, index) => (
                   <Grid item xs={12} sm={6} key={index}>
